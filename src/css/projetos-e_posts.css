@@ -1,0 +1,60 @@
+.cards_projects{
+    background-color: var(--bg-cards);
+    color: var(--text-color);
+    padding: 2rem;
+    
+    height: auto;
+    border-radius: 2rem;
+    box-shadow:  2px 5px #837E9F;
+}
+
+.projects-and-posts{
+    margin: 2rem 2rem 0 2rem;
+    width: 70%;
+}
+
+.projects{
+    display: grid;
+    grid-template-areas: 
+    "meus-projetos meus-projetos"
+    "projeto projeto"
+    "recent-posts recent-posts"
+    "post post";
+    grid-template-columns:auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 2rem;
+}
+
+.My_ProjectsTitle{
+    grid-area: meus-projetos;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projetos{
+    grid-area: projeto;
+    display: grid;
+    grid-template-areas: 
+    "projetos projetos";
+    /* grid-template-columns: repeat(2, 46rem); */
+    grid-template-rows: 170px 170px;
+    gap: 2.2rem;
+}
+
+.project{
+ grid: projetos;
+}
+
+
+.recent-postsTitle{
+    grid-area: recent-posts;
+}
+
+
+
+
+
+
+
+

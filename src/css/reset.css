@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
