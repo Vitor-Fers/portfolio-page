@@ -2,7 +2,6 @@
     background-color: var(--bg-cards);
     color: var(--text-color);
     padding: 2rem;
-    
     height: auto;
     border-radius: 2rem;
     box-shadow:  2px 5px #837E9F;
@@ -32,6 +31,10 @@
     align-items: center;
 }
 
+.project{
+    grid: projetos;
+}
+
 .projetos{
     grid-area: projeto;
     display: grid;
@@ -41,11 +44,6 @@
     grid-template-rows: 170px 170px;
     gap: 2.2rem;
 }
-
-.project{
- grid: projetos;
-}
-
 
 .recent-postsTitle{
     grid-area: recent-posts;
