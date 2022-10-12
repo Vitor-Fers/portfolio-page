@@ -1,5 +1,5 @@
 async function getApi(){
-    const apiResponse = await fetch(`https://api.github.com/users/DevelVitor`)
+    const apiResponse = await fetch(`https://api.github.com/users/Vitor-Fers`)
     return await apiResponse.json()
 }
 
