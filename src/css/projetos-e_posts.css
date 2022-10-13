@@ -23,7 +23,8 @@
     height: 8.6rem;
 }
 
-.My_ProjectsTitle p{
+.My_ProjectsTitle a{
+    color: var(--text-color);
     font-size: 1.2rem;
 }
 
@@ -49,7 +50,8 @@
 .project .description{
     position: absolute;
     top: 35%;
-    left: 7%;
+    left: 5%;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
@@ -66,9 +68,11 @@
 
 
 .projetos{
+    width: 100%;
     display: grid;
     grid-template-areas: 
     "projetos projetos";
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 170px 170px;
     gap: 2.2rem;
 }

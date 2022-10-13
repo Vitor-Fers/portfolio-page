@@ -6,7 +6,7 @@ async function getApi(){
 
 async function getRepo(){
     const reposApi = await fetch(`https://api.github.com/users/Vitor-Fers/repos`)
-    return reposApi.json()
+    return await reposApi.json()
 }
     
 
@@ -20,11 +20,31 @@ async function perfil(){
 }
 perfil()
 
-async function projectsRender(){
-    const repo = await getRepo()
+async function projectsInfos(){
+    var projectName = document.getElementById("project1")
+    var descriptionProject = document.getElementById("description")
+    var language = document.getElementById("lang")
 
-    console.log(repo)
+    const repos = await getRepo()
+    console.log(repos)
+    console.log()
+
+    for(let dados of repos){
+        var arrayObject= dados
+    }
+    
+
+    const dataObjects = (Object.values(arrayObject))
+    console.log(dataObjects)
+    
+    projectName.innerText = dataObjects[2]
+    descriptionProject.innerText = dataObjects[7]
+    language.innerText = dataObjects[57]
+    
+    // if(dataObjects[16]){
+    //     descriptionProject.innerText = dataObjects[16]
+    // }
 }
-projectsRender()
+projectsInfos()
 
 
