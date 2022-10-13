@@ -4,55 +4,77 @@
     padding: 2rem;
     height: auto;
     border-radius: 2rem;
+    margin-bottom: 2rem;
     box-shadow:  2px 5px #837E9F;
 }
 
 .projects-and-posts{
     margin: 2rem 2rem 0 2rem;
-    width: 70%;
+    width: 100%;
+    max-width: 95.2rem;
+    flex-direction: column;
 }
 
-.projects{
-    display: grid;
-    grid-template-areas: 
-    "meus-projetos meus-projetos"
-    "projeto projeto"
-    "recent-posts recent-posts"
-    "post post";
-    grid-template-columns:auto auto;
-    grid-template-rows: auto auto auto auto;
-    gap: 2rem;
-}
 
 .My_ProjectsTitle{
-    grid-area: meus-projetos;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 8.6rem;
+}
+
+.My_ProjectsTitle p{
+    font-size: 1.2rem;
 }
 
 .project{
-    grid: projetos;
+    position: relative;
 }
 
+.project .name_project{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.project .public{
+    position: absolute;
+    left: 80%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: solid 2px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.project .description{
+    position: absolute;
+    top: 35%;
+    left: 7%;
+    font-weight: 600;
+}
+
+.project .language{
+    position: absolute;
+    bottom: 10%;
+    left: 6%;   
+}
+
+.project .language li{
+    list-style: circle;
+    text-transform: uppercase;
+}
+
+
 .projetos{
-    grid-area: projeto;
     display: grid;
     grid-template-areas: 
     "projetos projetos";
-    /* grid-template-columns: repeat(2, 46rem); */
     grid-template-rows: 170px 170px;
     gap: 2.2rem;
 }
 
 .recent-postsTitle{
-    grid-area: recent-posts;
+    display: flex;
+    align-items: center;
+    height: 86px;
 }
-
-
-
-
-
-
-
-

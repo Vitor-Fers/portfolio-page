@@ -1,8 +1,24 @@
 /*Infos a esquerda*/
+
+/* Estilização padrão dos cards-aside.*/
+.cards-bg{
+    background-color: var(--bg-cards);
+    color: var(--text-color);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width: 34.8rem;
+    max-width: 34.8rem;
+    height: auto;
+    border-radius: 2rem;
+    box-shadow:  2px 5px #837E9F;
+}
+
 .infos-and-skills{
     display: flex;
     flex-direction: column;
-    margin: 2.5rem 0rem 2.5rem 2.5rem;
+    margin: 2.5rem 0 0 2.5rem;
+    width: 40%;
+    align-items: center;
 }
 
 .perfil{
