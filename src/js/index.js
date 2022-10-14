@@ -33,18 +33,10 @@ async function projectsInfos(){
         var arrayObject= dados
     }
     
+    projectName.innerText = arrayObject.name
+    descriptionProject.innerText = arrayObject.description
+    language.innerText = arrayObject.language
 
-    const dataObjects = (Object.values(arrayObject))
-    console.log(dataObjects)
-    
-    projectName.innerText = dataObjects[2]
-    descriptionProject.innerText = dataObjects[7]
-    language.innerText = dataObjects[57]
-    
-    // if(dataObjects[16]){
-    //     descriptionProject.innerText = dataObjects[16]
-    // }
 }
+
 projectsInfos()
-
-
