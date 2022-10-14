@@ -5,7 +5,7 @@ async function getApi(){
 
 
 async function getRepo(){
-    const reposApi = await fetch(`https://api.github.com/users/Vitor-Fers/repos`)
+    const reposApi = await fetch(`https://api.github.com/users/offmak/repos`)
     return await reposApi.json()
 }
     
@@ -21,22 +21,32 @@ async function perfil(){
 perfil()
 
 async function projectsInfos(){
-    var projectName = document.getElementById("project1")
-    var descriptionProject = document.getElementById("description")
-    var language = document.getElementById("lang")
-
+    var projects = document.getElementById("projetos")
     const repos = await getRepo()
     console.log(repos)
-    console.log()
 
-    for(let dados of repos){
-        var arrayObject= dados
-    }
+    // let objetoRepos = Object.keys(repos).length
+    // console.log(objetoRepos)
+
+     repos.forEach((dado,index) => {
+        
+        let lang = (repos[index].language)
+        let descript = (repos[index].description)
+
+        if(lang === null) lang = "Indisponível"
+        if(descript === null) descript = "Indisponível"
+
+        if(index < 4){
     
-    projectName.innerText = arrayObject.name
-    descriptionProject.innerText = arrayObject.description
-    language.innerText = arrayObject.language
-
+            projects.innerHTML += `<div class="cards_projects project">
+            <span id="project" class="name_project">${repos[index].name}</span>
+            <span class="public">${repos[index].visibility}</span>
+            <span id="description" class="description">${descript}</span>
+            <span id="lang" class="language">${lang}</span>
+        </div>`
+        }
+        }
+    );
 }
 
 projectsInfos()
