@@ -33,8 +33,8 @@ async function projectsInfos(){
         let lang = (repos[index].language)
         let descript = (repos[index].description)
 
-        if(lang === null) lang = "Indisponível"
-        if(descript === null) descript = "Indisponível"
+        if(lang === null) lang = "linguagem Indisponível"
+        if(descript === null) descript = "Descrição Indisponivel"
 
         if(index < 4){
     
