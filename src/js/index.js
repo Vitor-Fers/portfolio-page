@@ -4,7 +4,7 @@ async function getApi() {
 }
 
 async function getRepo() {
-    const reposApi = await fetch(`https://api.github.com/users/offmak/repos`)
+    const reposApi = await fetch(`https://api.github.com/users/Vitor-Fers/repos`)
     return await reposApi.json()
 }
 
