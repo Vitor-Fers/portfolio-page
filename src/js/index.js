@@ -4,7 +4,7 @@ async function getApi() {
 }
 
 async function getRepo() {
-    const reposApi = await fetch(`https://api.github.com/users/offmak/repos`)
+    const reposApi = await fetch(`https://api.github.com/users/vitor-fers/repos`)
     return await reposApi.json()
 }
 
@@ -29,6 +29,7 @@ async function projectsInfos() {
     projects.innerHTML = 'Carregando...'
 
     const repos = await getRepo()
+    console.log(repos)
 
     if (repos) {
         projects.innerHTML = null
@@ -45,7 +46,7 @@ async function projectsInfos() {
         if (index < 4) {
 
             projects.innerHTML += `<div class="cards_projects project">
-            <span id="project" class="name_project">${repos[index].name}</span>
+            <span id="project" class="name_project"><a href="${repos[index].html_url}">${repos[index].name}</a></span>
             <span class="public">${repos[index].visibility}</span>
             <span id="description" class="description">${descript}</span>
             <span id="lang" class="language">${lang}</span>

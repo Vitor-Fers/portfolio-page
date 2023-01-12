@@ -8,6 +8,10 @@
     box-shadow:  2px 5px #837E9F;
 }
 
+.cards_projects span a {
+    color: #837E9F;
+}
+
 .projects-and-posts{
     margin: 2rem 2rem 0 2rem;
     width: 100%;
