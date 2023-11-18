@@ -15,7 +15,6 @@ async function perfil() {
     perfilName.innerText = 'Carregando...'
 
     const api = await getApi()
-    console.log(api)
 
     if (api) {
         perfilImage.src = api.avatar_url
@@ -29,16 +28,17 @@ async function projectsInfos() {
     projects.innerHTML = 'Carregando...'
 
     const repos = await getRepo()
-    console.log(repos)
+
 
     if (repos) {
         projects.innerHTML = null
     }
 
-    repos.forEach((dado, index) => {
+    let index = 0
+    for(let repo of repos) {
 
-        let lang = (repos[index].language)
-        let descript = (repos[index].description)
+        let lang = repo.language
+        let descript = repo.description
 
         if (!lang) lang = "linguagem Indisponível"
         if (!descript) descript = "Descrição Indisponível"
@@ -46,14 +46,15 @@ async function projectsInfos() {
         if (index < 4) {
 
             projects.innerHTML += `<div class="cards_projects project">
-            <span id="project" class="name_project"><a href="${repos[index].html_url}">${repos[index].name}</a></span>
-            <span class="public">${repos[index].visibility}</span>
+            <span id="project" class="name_project"><a href="${repo.html_url}">${repo.name}</a></span>
+            <span class="public">${repo.visibility}</span>
             <span id="description" class="description">${descript}</span>
             <span id="lang" class="language">${lang}</span>
         </div>`
+
+        index++
         }
     }
-    );
 }
 
 perfil()
